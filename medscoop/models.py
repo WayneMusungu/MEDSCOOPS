@@ -45,3 +45,10 @@ class User(db.Model, UserMixin):
 #     def __repr__(self):
 #         return f"Post('{self.content}', '{self.date_posted}')"
     
+# class Drugs:
+#     """
+#     Blueprint class for all drugs consumed from API
+#     """
+#     def __init__(self, author, quote):
+#         self.author = author
+#         self.quote = quote
