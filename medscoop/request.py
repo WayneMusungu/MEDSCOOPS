@@ -1,7 +1,13 @@
 import requests
+
+
+def get_drug_list_func(a_list):
+    for item in a_list:
+        yield item
+
 def get_drug():
     """
-    Function to consume http request and return a Quote class instance
+    Function to consume http request and return an iteration of all drugs
     """
 
     url = "https://disease-drug-matching.p.rapidapi.com/get_drug/malaria"
@@ -10,18 +16,15 @@ def get_drug():
         "X-RapidAPI-Host": "disease-drug-matching.p.rapidapi.com",
         "X-RapidAPI-Key": "56d9de641bmshce72ffca6d5ab55p1effe9jsn25da4cf58d27"
     }
-
     response = requests.request("GET", url, headers=headers)
     response.raise_for_status
     respo_list = response.json()
     i = 0
-    for item in respo_list:
-        all_drugs = respo_list[i]['drug']
+    for result in get_drug_list_func(respo_list):
+        result = respo_list[i]['drug']
         i += 1
-        print(all_drugs)
-
-    return all_drugs
-
+        print(result)
+    
 
 
 def get_drug_info():
