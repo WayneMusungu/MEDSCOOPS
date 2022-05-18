@@ -36,10 +36,13 @@ def get_drug_info():
 
     response = requests.request("GET", url, headers=headers)
     response.raise_for_status
-    this = response.json()
-    theese = this.get('results')
-    thee = theese[0]['drugClass']
-    the = theese[0]['deaClass']
-    them = theese[0]['howSupplied']   
-    print(thee, the, them)
+    respoDict = response.json()
+    results = respoDict.get('results')
+    description = results[0]['description']
+    commonBrands = results[0]['commonBrands']
+    administration = results[0]['administration']   
+    adverseReactions = results[0]['adverseReactions']
+    precautions = results[0]['precautions']
+    print(description, commonBrands, administration, adverseReactions, precautions)
+    return (description, commonBrands, administration, adverseReactions, precautions)
 get_drug_info()
