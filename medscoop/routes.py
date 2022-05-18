@@ -8,12 +8,13 @@ from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route('/')
 @app.route('/home')
+@login_required
 def home():
     return render_template('home.html')
 
 @app.route('/about')
 # add a decorator on the about page
-@login_required
+
 def about():
     return render_template('about.html', title='About')
 
