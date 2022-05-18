@@ -24,7 +24,6 @@ def get_drug():
         result = respo_list[i]['drug']
         i += 1
         print(result)
-    
 
 
 def get_drug_info():
