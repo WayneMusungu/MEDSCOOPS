@@ -4,7 +4,7 @@ def get_drug():
     Function to consume http request and return a Quote class instance
     """
 
-    url = "https://disease-drug-matching.p.rapidapi.com/get_drug/Acute%20Promyelocytic%20Leukemia"
+    url = "https://disease-drug-matching.p.rapidapi.com/get_drug/malaria"
 
     headers = {
         "X-RapidAPI-Host": "disease-drug-matching.p.rapidapi.com",
@@ -13,17 +13,15 @@ def get_drug():
 
     response = requests.request("GET", url, headers=headers)
     response.raise_for_status
-    this = response.json()
+    respo_list = response.json()
     i = 0
-    for item in this:
-        theese = this[i]['drug']
+    for item in respo_list:
+        all_drugs = respo_list[i]['drug']
         i += 1
-        if theese == theese:
-            break
-        else:   
-            print(theese)
-    return theese
-get_drug()
+        print(all_drugs)
+
+    return all_drugs
+
 
 
 def get_drug_info():
@@ -45,4 +43,3 @@ def get_drug_info():
     precautions = results[0]['precautions']
     print(description, commonBrands, administration, adverseReactions, precautions)
     return (description, commonBrands, administration, adverseReactions, precautions)
-get_drug_info()
