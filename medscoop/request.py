@@ -26,13 +26,12 @@ def get_drug():
 
     return drug_list
 
-
 def get_drug_info():
     url = "https://drugapi.p.rapidapi.com/Drug/Summary/Azithromycin"
 
     headers = {
         "X-RapidAPI-Host": "drugapi.p.rapidapi.com",
-        "X-RapidAPI-Key": "56d9de641bmshce72ffca6d5ab55p1effe9jsn25da4cf58d27"
+        "X-RapidAPI-Key": "f7725bf91bmsh8b9c4b9c66c3030p1e178ejsn96a72c0ea9dd"
     }
 
     response = requests.request("GET", url, headers=headers)

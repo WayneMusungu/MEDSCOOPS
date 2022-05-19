@@ -2,6 +2,7 @@ from datetime import datetime
 from medscoop import db, login_manager
 from flask_login import UserMixin
 
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -52,3 +53,14 @@ class User(db.Model, UserMixin):
 #     def __init__(self, author, quote):
 #         self.author = author
 #         self.quote = quote
+
+class DrugInfo:
+    """
+    Movie class to define Movie Objects
+    """
+    def __init__(self, description, commonBrands, administration, adverseReactions, precautions):
+        self.description = description
+        self.commonBrands = commonBrands
+        self.administration = administration   
+        self.adverseReactions = adverseReactions
+        self.precautions = precautions
