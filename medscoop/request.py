@@ -1,4 +1,6 @@
+import json
 import requests
+import urllib3
 
 
 def get_drug():
@@ -10,7 +12,7 @@ def get_drug():
 
     headers = {
         "X-RapidAPI-Host": "disease-drug-matching.p.rapidapi.com",
-        "X-RapidAPI-Key": "56d9de641bmshce72ffca6d5ab55p1effe9jsn25da4cf58d27"
+        "X-RapidAPI-Key": "e4fa28b2d1msh62f65794a69ea7fp1e3b27jsncb86e159f234"
     }
     drug_list = []
     response = requests.request("GET", url, headers=headers)
@@ -47,29 +49,29 @@ def get_drug_info():
     return (description, commonBrands, administration, adverseReactions, precautions)
 
 
-def search_drug(disease_name):
-    search_drugs_url = 'https://disease-drug-matching.p.rapidapi.com/get_drug/{}'.format(api_key,disease_name)
+# def search_drug(disease_name):
+#     search_drugs_url = 'https://disease-drug-matching.p.rapidapi.com/get_drug/{}'.format(api_key,disease_name)
     
-    headers = {
-        "X-RapidAPI-Host": "disease-drug-matching.p.rapidapi.com",
-        "X-RapidAPI-Key": "56d9de641bmshce72ffca6d5ab55p1effe9jsn25da4cf58d27"
-    }
+#     headers = {
+#         "X-RapidAPI-Host": "disease-drug-matching.p.rapidapi.com",
+#         "X-RapidAPI-Key": "e4fa28b2d1msh62f65794a69ea7fp1e3b27jsncb86e159f234"
+#     }
     
-    with urllib.request.urlopen(search_drugs_url) as url:
-        search_drug_data = url.read()
-        search_drug_response = json.loads(search_drug_data)
+#     with urllib3.request.urlopen(search_drugs_url) as url:
+#         search_drug_data = url.read()
+#         search_drug_response = json.loads(search_drug_data)
 
-        search_drug_results = None
+#         search_drug_results = None
 
-        if search_drug_response['results']:
-            search_drug_list = search_drug_response['results']
-            i = 0
-            for result in search_drug_list:
-                result = search_drug_list[i]['drug']
-                i += 1
-                print(result)
-            search_drug_results = process_results(search_drug_list)
+#         if search_drug_response['results']:
+#             search_drug_list = search_drug_response['results']
+#             i = 0
+#             for result in search_drug_list:
+#                 result = search_drug_list[i]['drug']
+#                 i += 1
+#                 print(result)
+#             search_drug_results = process_results(search_drug_list)
 
 
-    return search_drug_results
+#     return search_drug_results
 

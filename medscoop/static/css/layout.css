@@ -1,0 +1,29 @@
+.hero{
+    background-color: #efc3f5;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    margin: auto;
+}
+.nav{
+    background-color: #7353ba;
+    color: white;
+
+}
+.link{
+    color: white;
+}
+a{
+    display: flex;
+    padding: 0.8rem;
+    margin-left: 1rem;
+}
+a:active{
+    background-color: #faa6ff;
+}
+a:hover{
+    background-color: #faa6ff;
+    color: #efc3f5;
+    padding: 0.7rem;
+    border-radius: 5px;
+}

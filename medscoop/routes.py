@@ -1,8 +1,10 @@
 from flask import render_template, url_for, redirect, flash, request
+import requests
 from medscoop import app, db, bcrypt
 from medscoop.forms import RegistrationForm,LoginForm
 from medscoop.models import User
 from flask_login import login_user, current_user, logout_user, login_required
+from medscoop.request import get_drug
 
 
 
