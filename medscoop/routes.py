@@ -20,7 +20,7 @@ def home():
 
 @app.route('/about')
 # add a decorator on the about page
-@login_required
+
 def about():
     return render_template('about.html', title='About')
 
