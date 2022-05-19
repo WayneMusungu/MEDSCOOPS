@@ -16,7 +16,10 @@
 a{
     display: flex;
     padding: 0.8rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 a:active{
     background-color: #faa6ff;
@@ -27,3 +30,11 @@ a:hover{
     padding: 0.7rem;
     border-radius: 5px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.font{
+    font-family: 'PT Sans', sans-serif;
+}
+
+

@@ -2,9 +2,10 @@
 
 .font{
     font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
 }
 .field-input {
-  width: 100%;
+  width: 60%;
   display: block;
   border: none;
   outline: none;
@@ -30,13 +31,17 @@
   color: #fff;
   border-radius: 25px;
   letter-spacing: 1.3px;
+  margin-bottom: 1rem;
 }
-.container {
+.content-section {
   background-color: #7353ba;
   color: #fff;
   max-width: 48vw;
   min-height: 500px;
-  padding: 1rem 3rem 1rem 2rem;
-  margin-top: 2rem;
+  padding: 2rem 3rem 1rem 3rem;
   border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 2rem;
 }
