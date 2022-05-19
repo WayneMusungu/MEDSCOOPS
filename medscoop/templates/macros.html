@@ -1,0 +1,10 @@
+{% macro displayDrugList(drugs) %}
+
+    {% for drug in drugs %}
+        <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 ">
+            <h2>{{drug}}</h2>
+            <h3>Pharyngitis</h3>
+        </div>
+    {% endfor %}
+
+{% endmacro %}
