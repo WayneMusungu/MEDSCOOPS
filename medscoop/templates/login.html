@@ -1,14 +1,15 @@
 {% extends "layout.html" %}
-{% block content %}
-<div style="margin-top:30px;" class="content-section">
-  <form class="" action="" method="post">
+{% block login %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+<div style="margin-top:30px;" class="container">
+  <form class="form" action="" method="post">
     {{ form.hidden_tag() }}
     <fieldset class="form-group">
-      <legend class='border-bottom mb-4'> Login </legend>
+      <legend class='border-bottom mb-4'> Welcome to MEDSCOOP... </legend>
       <div class="form-group mb-4">
         {{ form.email.label(class="form-control-label") }}
         {% if form.email.errors %}
-        {{ form.email(class="form-control form-control-lg is-invalid ") }}
+        {{ form.email(class="form-control form-control-lg is-invalid field-input ") }}
         <div class="invalid-feedback">
           {% for error in form.email.errors %}
           <span> {{ error }}</span>
@@ -38,18 +39,20 @@
       </div>
     </fieldset>
     <div class="form-group mb-2">
-      {{ form.submit(class="btn btn-outline-info") }}
+      {{ form.submit(class="submit-btn") }}
     </div>
 
     <small style="margin-left:10px;" class="text-muted ml-2">
       <a href="#">Forgot password?</a>
     </small>
 
+    <div class="border-top pt-3">
+      <small class="text-muted">
+        Don't Have an Account? <a class="ml-2" href="{{ url_for('register') }}"> Sign Up </a>
+      </small>
+    </div>
+
   </form>
 </div>
-<div class="border-top pt-3">
-  <small class="text-muted">
-    Don't Have an Account? <a class="ml-2" href="{{ url_for('register') }}"> Sign Up </a>
-  </small>
-</div>
-{% endblock %}
+
+{% endblock login %}
