@@ -26,10 +26,9 @@ def get_drug():
 
     return drug_list
 
-get_drug()
 
 def get_drug_info():
-    url = "https://drugapi.p.rapidapi.com/Drug/Summary/Acetaminophen-and-Codeine-Phosphate-Oral-Solution-acetaminophen-codeine-phosphate-665"
+    url = "https://drugapi.p.rapidapi.com/Drug/Summary/Azithromycin"
 
     headers = {
         "X-RapidAPI-Host": "drugapi.p.rapidapi.com",
