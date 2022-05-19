@@ -10,7 +10,14 @@ from flask_login import login_user, current_user, logout_user, login_required
 @app.route('/home')
 @login_required
 def home():
-    return render_template('home.html')
+    drugs = get_drug()
+    title = 'Pharyngitis'
+    search_disease = request.args.get('disease_query')
+
+    if search_disease:
+        return redirect(url_for('search',disease_name = search_disease))
+    else:
+        return render_template('home.html', title =title, drugs = drugs)
 
 @app.route('/about')
 # add a decorator on the about page
@@ -62,3 +69,14 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+@app.route('/search/<disease_name>')
+def search(disease_name):
+    '''
+    View function to display the search results
+    '''
+    disease_name_list = disease_name.split(" ")
+    disease_name_format = "+".join(disease_name_list)
+    searched_drug = search_drug(disease_name_format)
+    title = f'search results for {disease_name}'
+
+    return render_template('search.html',drugs = searched_drug)
