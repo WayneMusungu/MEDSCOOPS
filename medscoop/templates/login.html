@@ -1,11 +1,12 @@
 {% extends "layout.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 {% block content %}
 <div style="margin-top:30px;" class="content-section">
   <form class="" action="" method="post">
     {{ form.hidden_tag() }}
     <fieldset class="form-group">
       <legend class='border-bottom mb-4'> Login </legend>
-      <div class="form-group mb-4">
+      <div class="form-group mb-4 ">
         {{ form.email.label(class="form-control-label") }}
         {% if form.email.errors %}
         {{ form.email(class="form-control form-control-lg is-invalid ") }}
