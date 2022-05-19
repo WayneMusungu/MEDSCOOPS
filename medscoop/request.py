@@ -8,7 +8,7 @@ def get_drug():
     Function to consume http request and return an iteration of all drugs
     """
 
-    url = "https://disease-drug-matching.p.rapidapi.com/get_drug/Pharyngitis"
+    url = "https://disease-drug-matching.p.rapidapi.com/search_disease/ad"
 
     headers = {
         "X-RapidAPI-Host": "disease-drug-matching.p.rapidapi.com",

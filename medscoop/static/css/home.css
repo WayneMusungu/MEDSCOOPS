@@ -1,0 +1,41 @@
+.drug {
+  background-color: #2f195f;
+  padding: 0.9rem;
+  width: 20vw;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 10px;
+  display: flex;
+  animation: move 5s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 0.2s;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+.drug:hover {
+  -ms-transform: scale(1.9); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.4);
+}
+
+@keyframes move {
+  from {
+    background-color: #2f195f;
+  }
+  to {
+    background-color: #693cca;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@300&display=swap");
+
+.font {
+  font-family: "Turret Road", cursive;
+  align-items: center;
+}
