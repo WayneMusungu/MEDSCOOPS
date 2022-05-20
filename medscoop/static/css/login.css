@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.font{
+    font-family: 'PT Sans', sans-serif;
+}
+.field-input {
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.2rem;
+  padding: 10px 15px 10px 10px;
+}
+
+.form-field {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.submit-btn {
+  box-shadow: none;
+  outline: none;
+  margin-top: 1rem;
+  width: 10vw;
+  height: 40px;
+  background-color: #faa6ff;
+  color: #fff;
+  border-radius: 25px;
+  letter-spacing: 1.3px;
+}
+.container {
+  background-color: #7353ba;
+  color: #fff;
+  max-width: 48vw;
+  min-height: 500px;
+  padding: 1rem 3rem 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 15px;
+}

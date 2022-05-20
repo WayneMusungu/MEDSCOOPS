@@ -1,4 +1,11 @@
-{% extends 'layout.html' %}
-{% block content %}
-    Hello World
-{% endblock %}
+{% extends 'layout.html' %} {% block drug %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<div class="container font">
+  {% for drug in drugs %}
+  <div class="drug">
+    <h5 class="justify-content-center">{{drug}}</h5>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock drug %}

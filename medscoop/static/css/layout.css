@@ -1,0 +1,40 @@
+.hero{
+    background-color: #efc3f5;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    margin: auto;
+}
+.nav{
+    background-color: #7353ba;
+    color: white;
+
+}
+.link{
+    color: white;
+}
+a{
+    display: flex;
+    padding: 0.8rem;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+a:active{
+    background-color: #faa6ff;
+}
+a:hover{
+    background-color: #faa6ff;
+    color: #efc3f5;
+    padding: 0.7rem;
+    border-radius: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+.font{
+    font-family: 'PT Sans', sans-serif;
+}
+
+
