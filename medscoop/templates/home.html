@@ -1,10 +1,11 @@
-{% extends 'layout.html' %}
-{% block content %}
-<h3>Pharyngitis(sore-throat)</h3>
-
-{% for drug in drugs %}
-<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 ">
-    <h5>{{drug}}</h5>
+{% extends 'layout.html' %} {% block drug %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<div class="container font">
+  {% for drug in drugs %}
+  <div class="drug">
+    <h5 class="justify-content-center">{{drug}}</h5>
+  </div>
+  {% endfor %}
 </div>
-{% endfor %}
-{% endblock %}
+
+{% endblock drug %}
